@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Para Ti ❤️</title>
+  <link rel="stylesheet" href="14.2.css">
+</head>
+<body class="portada">
+
+  <div class="card">
+    <h1>Hola mi amor ¿Quieres ser mi San Valentín? 💘</h1>
+
+    <p>
+      Prometo abrazos infinitos,
+      risas sin motivo
+      y caminar contigo siempre ❤️
+    </p>
+
+    <div class="botones">
+      <button class="si" onclick="aceptar()">Sí 💖</button>
+      <button class="no" onmouseover="moverNo()">No 🙈</button>
+    </div>
+  </div>
+
+  <script>
+    function aceptar() {
+      document.body.style.opacity = "0";
+      document.body.style.transition = "0.6s";
+
+      setTimeout(() => {
+        window.location.href = "recuerdos.html";
+      }, 600);
+    }
+
+    function moverNo() {
+      const boton = document.querySelector(".no");
+      const x = Math.random() * 200 - 100;
+      const y = Math.random() * 200 - 100;
+      boton.style.transform = `translate(${x}px, ${y}px)`;
+    }
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Nuestro Mundo ❤️</title>
+  <link rel="stylesheet" href="14f.css">
+</head>
+<body>
+
+  <!-- INTRO PANTALLA COMPLETA -->
+  <div id="intro">
+    <h2>🎞 Toca la pantalla para comenzar nuestra historia ❤️</h2>
+  </div>
+
+  <!-- MÚSICA (solo una vez) -->
+  <audio id="musica" loop>
+    <source src="Río Roma - Me Cambiaste la Vida (En Vivo)(MP3_160K).mp3.mpeg" type="audio/mpeg">
+  </audio>
+
+  <!-- HERO -->
+  <section class="hero reveal">
+    <h1>Nuestra Historia ❤️</h1>
+    <p>Desde el 19 de Agosto de 2022</p>
+  </section>
+
+  <!-- CONTADOR -->
+  <section class="tiempo-section reveal">
+    <h2>Tiempo juntos ⏳</h2>
+    <div class="contador">
+      <div class="box"><span id="years">0</span><p>Años</p></div>
+      <div class="box"><span id="days">0</span><p>Días</p></div>
+      <div class="box"><span id="hours">0</span><p>Horas</p></div>
+      <div class="box"><span id="minutes">0</span><p>Minutos</p></div>
+      <div class="box"><span id="seconds">0</span><p>Segundos</p></div>
+    </div>
+  </section>
+
+  <!-- BOTÓN CARTA -->
+<section class="carta-section reveal">
+  <button class="btn-carta" onclick="mostrarCarta()">
+    Leer mi carta para ti 💌
+  </button>
+
+  <div id="carta" class="carta hidden">
+    <div class="carta-contenido">
+      <h2>Mi carta para ti ❤️</h2>
+      <p id="textoCarta"></p>
+    </div>
+  </div>
+</section>
+
+
+  <!-- GALERÍA -->
+  <section class="galeria reveal">
+    <h2>Nuestros Recuerdos 📸</h2>
+
+    <div class="imagenes">
+
+      <div class="frase">
+        "Desde ese día entendí que mi lugar favorito es a tu lado."
+      </div>
+
+      <img src="img/19/1.jpeg" alt="">
+      <img src="img/19/2.jpeg" alt="">
+      <img src="img/19/3.jpeg" alt="">
+
+      <div class="frase">
+        "Cada recuerdo contigo tiene algo que no se puede explicar."
+      </div>
+
+      <img src="img/19/4.jpeg" alt="">
+      <img src="img/19/5.jpeg" alt="">
+      <img src="img/19/6.jpeg" alt="">
+
+      <div class="frase">
+        "No sabía que alguien podía convertirse en hogar."
+      </div>
+
+      <img src="img/19/7.jpeg" alt="">
+      <img src="img/19/8.jpeg" alt="">
+      <img src="img/19/9.jpeg" alt="">
+      <img src="img/19/10.jpeg" alt="">
+
+    </div>
+  </section>
+
+  <!-- MENSAJE EXTRA -->
+  <section class="mensaje-extra reveal">
+    <p>
+      Gracias por todo este tiempo que me has acompañado, mi vida.
+      Valoro cada momento, cada detalle y todo el amor que me has dado.
+      <br><br>
+      Espero con ilusión que este sábado podamos disfrutar juntos,
+      caminar tomados de la mano y simplemente ser nosotros.
+      <br><br>
+      Te amo, mi vida ❤️
+    </p>
+  </section>
+
+  <!-- SORPRESA -->
+  <section class="sorpresa reveal">
+    <button onclick="mostrarFinal(); vibrar();">
+      Tengo algo más para ti 💌
+    </button>
+    <div id="mensajeFinal" class="hidden"></div>
+  </section>
+
+  <!-- BOTÓN SECRETO -->
+  <button id="botonSecreto" onclick="mostrarSecreto()">
+    Siempre contigo 💍
+  </button>
+
+  <div id="mensajeSecreto" class="hidden">
+    Pase lo que pase, en cualquier universo,
+    siempre voy a elegirte a ti ❤️
+  </div>
+
+  <!-- CORAZONES -->
+  <div class="corazones"></div>
+
+  <!-- MODAL -->
+  <div id="modal" class="modal hidden">
+    <span class="cerrar" onclick="cerrarModal()">✖</span>
+    <img id="modalImg" alt="">
+  </div>
+
+  <div class="sorpresa">
+  <button onclick="mostrarFinal()">Un último mensaje 💌</button>
+</div>
+
+<div id="mensajeFinal" class="hidden mensaje-final"></div>
+
+
+  <script src="14f.js"></script>
+
+</body>
+</html>
